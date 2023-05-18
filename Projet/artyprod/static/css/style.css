@@ -1,0 +1,11 @@
+.card-img-top {
+    height: 90px; /* set a fixed height for the image container */
+    overflow: hidden; /* hide any overflow content */
+  }
+  
+  .card-img-top img {
+    width: 100%; /* make the image fill the container */
+    height: auto; /* scale the image proportionally */
+    object-fit: cover; /* crop the image to fill the container */
+    object-position: center; /* center the image within the container */
+  }

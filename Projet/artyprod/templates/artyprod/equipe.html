@@ -1,0 +1,21 @@
+{% load static %}
+{% include 'navbar.html' %}
+<div class="py-5"></div>
+<link rel="stylesheet" type="text/css" href="{% static 'artyprod/css/style.css' %}">
+
+{% block content %}
+  <div class="row row-cols-1 row-cols-md-2 justify-content-md-between">
+    {% for person in personnel %}
+      <div class="col mb-4">
+        <div class="card" style="width: 25rem;">
+          <img src="{{ person.fichier_photo.url }}" class="card-img-top" alt="{{ person.nom }}'s photo">
+          <div class="card-body">
+            <h5 class="card-title">{{ person.nom }}</h5>
+            <a href="{{ person.fichier_CV.url }}" class="btn btn-primary">CV</a>
+            <a href="{{ person.lien_linkedIn }}" class="btn btn-primary">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

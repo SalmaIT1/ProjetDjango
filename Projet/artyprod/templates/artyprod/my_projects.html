@@ -1,0 +1,54 @@
+{% load static %}
+{% include 'navbar.html' %}
+<div class="py-5"></div>
+
+<div>
+  <table style="width: 100%; margin: 5% 0;">
+    <thead>
+      <tr>
+        <th>Project Name</th>
+        <th>Status</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Services</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% if ongoing_projects %}
+        {% for project in ongoing_projects %}
+          <tr>
+            <td>{{ project.libellai }}</td>
+            <td>Ongoing</td>
+            <td>{{ project.date_debut }}</td>
+            <td></td> <!-- Empty column for End Date -->
+            <td>{% for service in project.services.all %}{{ service.type }}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
+          </tr>
+        {% endfor %}
+      {% else %}
+        <tr>
+          <td colspan="6">No ongoing projects found.</td>
+        </tr>
+      {% endif %}
+      
+      {% if completed_projects %}
+        {% for project in completed_projects %}
+          <tr>
+            <td><a href="{% url 'project_details' project.id %}">{{ project.libellai }}</a></td>
+            <td>Completed</td>
+            <td>{{ project.date_debut }}</td>
+            <td>{{ project.date_fin }}</td>
+            <td>{% for service in project.services.all %}{{ service.type }}{% if not forloop.last %}, {% endif %}{% endfor %}</td>
+            <td>
+              <a href="{% url 'projet_details_csv' project.id %}">Print Details file</a>
+            </td>
+          </tr>
+        {% endfor %}
+      {% else %}
+        <tr>
+          <td colspan="6">No completed projects found.</td>
+        </tr>
+      {% endif %}
+    </tbody>
+  </table>
+</div>

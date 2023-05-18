@@ -1,0 +1,25 @@
+{% load static %}
+{% include 'navbar.html' %}
+<div class="py-5"></div>
+
+{% block content %}
+  <h1>Portfolio</h1>
+  <div class="d-flex flex-wrap">
+    {% for projet in projet %}
+      <div class="col-md-3" style="width: 18rem;">
+        <div class="card">
+            <img src="{% static 'images/P.png' %}" class="card-img-top" alt="Placeholder Image">
+          <div class="card-body">
+            <h5 class="card-title">{{ projet.libellai }}</h5>
+            
+            <a href="{% url 'project_details' pk=projet.pk %}" class="btn btn-primary" target="_blank">Visit Project</a>
+          </div>
+        </div>
+      </div>
+      {% if forloop.counter|divisibleby:4 and not forloop.last %}
+        </div><div class="row">
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endblock %}
+

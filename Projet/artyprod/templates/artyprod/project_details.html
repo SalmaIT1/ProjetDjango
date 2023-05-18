@@ -1,0 +1,35 @@
+{% load static %}
+{% include 'navbar.html' %}
+<div class="py-5"></div>
+
+{% block content %}
+<div class="container"style="margin-top:3%;">
+    <div class="text-center">
+        <h1>{{ projet.libellai }}</h1>
+        <p>{{ projet.description }}</p>
+        
+        <h2>Services:</h2>
+        <ul>
+            {% for service in projet.services.all %}
+                <li>{{ service.type }}</li>
+            {% endfor %}
+        </ul>
+        
+        
+    </div>
+    <div>
+        
+
+           
+            <h1>Leave a Review</h1>
+            <form method="POST" action="{% url 'submit_review' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="btn btn-primary">Submit Review</button>
+</form>
+
+            
+
+    </div>
+</div>
+{% endblock %}

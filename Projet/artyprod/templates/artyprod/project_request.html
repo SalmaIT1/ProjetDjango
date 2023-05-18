@@ -1,0 +1,11 @@
+{% load static %}
+{% include 'navbar.html' %}
+<div class="py-5"></div>
+{% block content %}
+  <h1>Request a Project</h1>
+  <form method="post" style="margin:0% 30% 5% 30% ;">
+    {% csrf_token %}
+    {{ projetForm.as_p }}
+    <input type="submit" value="Submit">
+  </form>
+{% endblock %}

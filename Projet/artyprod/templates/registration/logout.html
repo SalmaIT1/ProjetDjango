@@ -1,0 +1,8 @@
+{% load static %}
+{% include 'navbar.html' %}
+<div class="py-5"></div>
+
+{% block content %}
+<h2>Vous êtes déconnecté. </h2>
+<a href="{% url 'login' %}">Se reconnecter</a>
+{% endblock %}

@@ -1,0 +1,389 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  {% include 'navbar.html' %}
+  
+
+  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">                
+      <div class="row">
+        {% if user.is_authenticated %}
+              <div class="section-heading">
+                  <h4> Welcome <em>{{ user.first_name }} {{ user.last_name }}</em></h4>
+              </div>
+          {% endif %}
+        <div class="col-lg-12">
+          <div class="row">            
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row">                               
+                  <div class="col-lg-12">
+                    <h6>ArtyProd Agency</h6>
+                    <h2>Owned by you, driven by us.</h2>
+                    <p>ArtyProd is the place where ideas come to life . <br/> We open doors to new ideas. <br/> We do the thinking, you do the winning </p>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img src="{% static 'images/index.jpg'%}" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="about" class="about section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="about-left-image  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img src="{% static 'images/about-dec.png'%}" alt="">
+              </div>
+            </div>
+            <div class="col-lg-6 align-self-center  wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+              <div class="about-right-content">
+                <div class="section-heading">
+                  <h6>About Us</h6>
+                  <h4>Who is ArtyProd <em>Agency</em></h4>
+                  <div class="line-dec"></div>
+                </div>
+                <p>ArtyProd is a creative digital agency specializing in innovative solutions. Our team of talented professionals is passionate about design and technology, working collaboratively to bring our clients' visions to life. We pride ourselves on delivering high-quality work on time and within budget, building strong relationships with our clients along the way. From web and mobile app development to branding and digital marketing strategies, we provide comprehensive solutions tailored to your needs. Choose ArtyProd as your digital partner and let us help you achieve your goals. Contact us today to learn more.</p>
+                <div class="row">
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="skill-item first-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+                      <div class="progress" data-percentage="80">
+                        <span class="progress-left">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value">
+                          <div>
+                            80%<br>
+                            <span>Think</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="skill-item second-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+                      <div class="progress" data-percentage="90">
+                        <span class="progress-left">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value">
+                          <div>
+                            90%<br>
+                            <span>Plan</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-4">
+                    <div class="skill-item third-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
+                      <div class="progress" data-percentage="100">
+                        <span class="progress-left">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                          <span class="progress-bar"></span>
+                        </span>
+                        <div class="progress-value">
+                          <div>
+                            100%<br>
+                            <span>Do</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="services" class="services section" style="margin-bottom: 0;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+            <h6>Our Services</h6>
+            <h4>What Our Agency <em>Provides</em></h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="grid">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="menu">
+                    <div class="first-thumb active">
+                      <div class="thumb">
+                        <span class="icon"><img src="{% static 'images/services-icon-01.png'%}"  alt=""></span>
+                        Graphic Design
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">                 
+                        <span class="icon"><img src="{% static 'images/services-icon-02.png'%}"  alt=""></span>
+                        AudioVisual Production
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">                 
+                        <span class="icon"><img src="{% static 'images/services-icon-03.png'%}"  alt=""></span>
+                        UI/UX Design
+                      </div>
+                    </div>
+                    <div>
+                      <div class="thumb">                 
+                        <span class="icon"><img src="{% static 'images/services-icon-04.png'%}"  alt=""></span>
+                        Photoshop
+                      </div>
+                    </div>
+                    <div class="last-thumb">
+                      <div class="thumb">                 
+                        <span class="icon"><img src="{% static 'images/services-icon-05.png'%}"  alt=""></span>
+                        3D Design
+                      </div>
+
+                    </div>
+                  </div>
+                </div> 
+                         
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+<section>
+  <div id="portfolio" class="our-portfolio section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="section-heading wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+            <h6>Our Portofolio</h6>
+            <h4>See Our Recent <em>Projects</em></h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="loop owl-carousel">
+            <div class="item">
+              <a href="http://127.0.0.1:8000/artyprod/project_details/2/">
+                <div class="portfolio-item">
+                <div class="thumb">
+                  <img src="{% static 'images/P.png'%}" alt="">
+                </div>
+                <div class="down-content">
+                  <h4>Modern Coffee Table Design</h4>
+                  <span>3D Design, Graphic Design</span>
+                </div>
+              </div>
+              </a>  
+            </div>
+            <div class="item">
+              <a href="http://127.0.0.1:8000/artyprod/project_details/5/">
+                <div class="portfolio-item">
+                <div class="thumb">
+                  <img src="{% static 'images/P.png'%}" alt="">
+                </div>
+                <div class="down-content">
+                  <h4>Elegant Branding for Luxury Fashion</h4>
+                  <span>3D Design, Graphic Design, Web design, Logo Design</span>
+                </div>
+              </div>
+              </a>  
+            </div>
+            <div class="item">
+              <a href="http://127.0.0.1:8000/artyprod/project_details/6/">
+                <div class="portfolio-item">
+                <div class="thumb">
+                  <img src="{% static 'images/P.png'%}" alt="">
+                </div>
+                <div class="down-content">
+                  <h4>Striking Packaging Design for Artisanal Products</h4>
+                  <span>	AudioVisual Production, Graphic Design</span>
+                </div>
+              </div>
+              </a>  
+            </div>
+            <div class="item">
+              <a href="http://127.0.0.1:8000/artyprod/project_details/7/">
+                <div class="portfolio-item">
+                <div class="thumb">
+                  <img src="{% static 'images/P.png'%}"alt="">
+                </div>
+                <div class="down-content">
+                  <h4>Modern and Engaging Website for Creative Agency</h4>
+                  <span>	Web design</span>
+                </div>
+              </div>
+              </a>  
+            </div>
+            <div class="item">
+              <a href="#">
+                <div class="portfolio-item">
+                <div class="thumb">
+                  <img src="{% static 'images/P.png'%}" alt="">
+                </div>
+                <div class="down-content">
+                  <h4>Website Builder</h4>
+                  <span>Marketing</span>
+                </div>
+              </div>
+              </a>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div id="blog" class="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 offset-lg-4  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.3s">
+        <div class="section-heading">
+          <h6>Recent News</h6>
+          <h4>Our Clients<em> Reviews</em></h4>
+          <div class="line-dec"></div>
+        </div>
+      </div>
+      <div class="row">
+        {% for review in reviews|slice:":5" %}
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ review.name }}</h5>
+                        <p class="card-text">{{ review.message }}</p>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <p>No reviews found.</p>
+        {% endfor %}
+    </div> 
+    </div>
+  </div>
+</div>  
+  <section>
+  <div id="blog" class="blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 offset-lg-4  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.3s">
+          <div class="section-heading">
+            <h6>Recent News</h6>
+            <h4>Check Our Blog <em>Posts</em></h4>
+            <div class="line-dec"></div>
+          </div>
+        </div>
+        <div class="col-lg-6 show-up wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+          <div class="blog-post">
+            <div class="thumb">
+              <a href="http://127.0.0.1:8000/blog/post/5/"><img src="{% static 'images/Blog-post-01.jpg'%}" alt=""></a>
+            </div>
+            <div class="down-content">
+              <span class="category">Digital Marketing</span>
+              <span class="date">May 17, 2023</span>
+              <a href="#"><h4>Digital Marketing: Driving Business Success in the Digital Age
+                Eiusmod Tempor Incididunt</h4></a>
+             
+              <span class="author">By:ArtyProd</span>
+              <div class="border-first-button"><a href="http://127.0.0.1:8000/blog/Post/">Discover More</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+          <div class="blog-posts">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="post-item">
+                  <div class="thumb">
+                    <a href="http://127.0.0.1:8000/blog/post/4/"><img src="{% static 'images/Blog-post-07.jpg'%}" alt=""></a>
+                  </div>
+                  <div class="right-content">
+                    <span class="category">Audiovisual Production</span>
+                    <span class="date">May 17, 2023</span>
+                    <a href="#"><h4>The Art of Audiovisual Production: Weaving Sight and Sound</h4></a>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="post-item">
+                  <div class="thumb">
+                    <a href="http://127.0.0.1:8000/blog/post/3/"><img src="{% static 'images/Blog-post-06.jpg'%}"  alt=""></a>
+                  </div>
+                  <div class="right-content">
+                    <span class="category">Graphic Design</span>
+                    <span class="date">May 17, 2023</span>
+                    <a href="#"><h4>The Power of Graphic Design: Communicating Creativity and Impact</h4></a>
+                    
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</section>
+
+
+
+
+
+
+
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2022 ArtyProd Co., Ltd. All Rights Reserved. 
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="{% static 'jquery/jquery.min.js'%}"></script>
+  <script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'js/owl-carousel.js'%}"></script>
+  <script src="{% static 'js/animation.js'%}"></script>
+  <script src="{% static 'js/imagesloaded.js'%}"></script>
+  <script src="{% static 'js/custom.js'%}"></script>
+
+</body>
+</html>
